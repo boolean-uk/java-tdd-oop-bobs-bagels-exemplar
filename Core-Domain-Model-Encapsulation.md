@@ -93,6 +93,10 @@ I want customers to only be able to order things that we stock in our inventory.
 |               |                                   |                                |                                                                                 | Failure message when something outside of the list is added???   |
 
 
+## Class Diagram - First Version
+
+![](Bobs-Bagels-First-Class-Diagram.png)
+
 ## Bob's Inventory
 
 | SKU  | Price | Name    | Variant       |
