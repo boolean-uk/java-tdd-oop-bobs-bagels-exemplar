@@ -14,8 +14,9 @@ public class Basket {
         this.contents = new ArrayList<>();
         this.stock = new HashMap<>();
         this.stock.put("BGLO", new InventoryItem("BGLO", 0.49, "Bagel", "Onion"));
-        this.stock.put("BGLP", new InventoryItem("BGLP", 0.39, "Bagel", "Onion"));
-        this.stock.put("BGLS", new InventoryItem("BGLS", 0.49, "Bagel", "Onion"));
+        this.stock.put("BGLP", new InventoryItem("BGLP", 0.39, "Bagel", "Plain"));
+        this.stock.put("BGLE", new InventoryItem("BGLE", 0.49, "Bagel", "Everything"));
+        this.stock.put("BGLS", new InventoryItem("BGLS", 0.49, "Bagel", "Sesame"));
         this.stock.put("COFB", new InventoryItem("COFB", 0.99, "Coffee", "Black"));
         this.stock.put("COFW", new InventoryItem("COFW", 1.19, "Coffee", "White"));
         this.stock.put("COFC", new InventoryItem("COFC", 1.29, "Coffee", "Cappuccino"));

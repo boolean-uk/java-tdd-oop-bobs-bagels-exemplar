@@ -61,6 +61,7 @@ class BasketTest {
         /*
             | BGLO | 0.49  | Bagel   | Onion         |
             | BGLP | 0.39  | Bagel   | Plain         |
+            | BGLE | 0.49  | Bagel   | Everything    |
             | BGLS | 0.49  | Bagel   | Sesame        |
             | COFB | 0.99  | Coffee  | Black         |
             | COFW | 1.19  | Coffee  | White         |
@@ -76,6 +77,7 @@ class BasketTest {
         Basket basket = new Basket(5);
         Assertions.assertEquals(0.49, basket.getCost("BGLO"));
         Assertions.assertEquals(0.39, basket.getCost("BGLP"));
+        Assertions.assertEquals(0.49, basket.getCost("BGLE"));
         Assertions.assertEquals(0.49, basket.getCost("BGLS"));
         Assertions.assertEquals(0.99, basket.getCost("COFB"));
         Assertions.assertEquals(1.19, basket.getCost("COFW"));
