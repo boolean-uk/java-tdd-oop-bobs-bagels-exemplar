@@ -27,7 +27,7 @@ public class Main {
         System.out.println("\n4:");
         System.out.println(basket.resizeBasket(3));
         System.out.println(basket);
-        // TODO: Add code to test and deal with resizing the basket smaller when it already contains items.
+        // DONE: Add code to test and deal with resizing the basket smaller when it already contains items.
 
         // 5. Get an error if I try to remove a non-existent item
         System.out.println("\n5:");

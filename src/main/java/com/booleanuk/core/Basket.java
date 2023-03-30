@@ -61,6 +61,10 @@ public class Basket {
     }
 
     public String resizeBasket(int newCapacity) {
+        while (this.contents.size() > newCapacity) {
+            int items = this.contents.size();
+            this.contents.remove(items-1);
+        }
         this.setCapacity(newCapacity);
         return "Successfully resized the basket to " + newCapacity + " items";
     }

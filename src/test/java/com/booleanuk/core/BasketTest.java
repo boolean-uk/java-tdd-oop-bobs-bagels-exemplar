@@ -57,6 +57,19 @@ class BasketTest {
     }
 
     @Test
+    void testReduceBasketWithItemsIn() {
+        Basket basket = new Basket(5);
+        basket.add("BGLO");
+        basket.add("COFL");
+        basket.add("FILH");
+        basket.add("BGLO");
+        Assertions.assertEquals("Successfully resized the basket to 2 items", basket.resizeBasket(2));
+        String basketString = "[SKU: BGLO, Price: 0.49, Name: Onion Bagel]\n";
+        basketString += "[SKU: COFL, Price: 1.29, Name: Latte Coffee]\n";
+        Assertions.assertEquals(basketString, basket.toString());
+    }
+
+    @Test
     void testGetCost() {
         /*
             | BGLO | 0.49  | Bagel   | Onion         |
