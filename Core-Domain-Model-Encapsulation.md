@@ -75,13 +75,13 @@ I want customers to only be able to order things that we stock in our inventory.
 
 | Classes       | Members                           | Methods                        | Scenarios                                                                       | Outputs                                                          |
 |---------------|-----------------------------------|--------------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------|
-| Basket        | ArrayList<InventoryItem> contents | add(InventoryItem item)        | 1. 3. As a customer add an item to my basket that has space in it               | Success message if the item is successfully added                |
+| Basket        | ArrayList<InventoryItem> contents | add(String SKU)                | 1. 3. As a customer add an item to my basket that has space in it               | Success message if the item is successfully added                |
 |               | int capacity                      |                                |                                                                                 | Failure message if the basket is full                            |
-|               |                                   | remove(InventoryItem item)     | 2. 5. As a customer remove the first instance of a type of item from the basket | Success message if the item is successfully removed              |
+|               |                                   | remove(String SKU)             | 2. 5. As a customer remove the first instance of a type of item from the basket | Success message if the item is successfully removed              |
 |               |                                   |                                |                                                                                 | Failure message if no items of that type are found in the basket |
 |               |                                   | resizeBasket(int newCapacity)  | 4. As a manager change the capacity of a basket                                 | Success message if the basket is resized                         |
 |               |                                   | get/setCapacity()              |                                                                                 | Failure message if the newCapacity is not a proper size          |
-|               |                                   | getCost(InventoryItem item)    | 6. Get the total cost of the items in the basket                                | Total cost of the contents returned                              |
+|               |                                   | getCost(String SKU)            | 6. Get the total cost of the items in the basket                                | Total cost of the contents returned                              |
 |               |                                   | getTotalCost()                 |                                                                                 |                                                                  |
 |               |                                   |                                |                                                                                 |                                                                  |
 | InventoryItem | String SKU                        | get/setSKU(String SKU)         |                                                                                 |                                                                  |
@@ -96,6 +96,10 @@ I want customers to only be able to order things that we stock in our inventory.
 ## Class Diagram - First Version
 
 ![](Bobs-Bagels-First-Class-Diagram.png)
+
+## Class Diagram - Second Version
+
+![](Bobs-Bagels-Second-Class-Diagram.png)
 
 ## Bob's Inventory
 
