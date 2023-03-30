@@ -34,6 +34,18 @@ class BasketTest {
 
     @Test
     void testRemove() {
+        Basket basket = new Basket(5);
+        basket.add("BGLO");
+        basket.add("COFL");
+        basket.add("FILH");
+        basket.add("BGLO");
+        Assertions.assertEquals("Successfully removed Onion Bagel from basket.", basket.remove("BGLO"));
+        String basketString = "[SKU: COFL, Price: 1.29, Name: Latte Coffee]\n";
+        basketString += "[SKU: FILH, Price: 0.12, Name: Ham Filling]\n";
+        basketString += "[SKU: BGLO, Price: 0.49, Name: Onion Bagel]\n";
+        Assertions.assertEquals(basketString, basket.toString());
+        Assertions.assertEquals("Unable to remove White Coffee as you haven't added it to the basket.", basket.remove("COFW"));
+        Assertions.assertEquals("Unable to remove item with the SKU XXXX as we don't recognise that code.", basket.remove("XXXX"));
     }
 
     @Test
@@ -81,5 +93,16 @@ class BasketTest {
 
     @Test
     void testGetTotalCost() {
+        Basket basket = new Basket(5);
+        // Epsilon used to avoid false failures due to rounding errors
+        double epsilon = 0.00001;
+        Assertions.assertEquals(0.0, basket.getTotalCost(), epsilon);
+
+        basket.add("BGLO");
+        basket.add("COFL");
+        basket.add("FILH");
+        basket.add("BGLO");
+
+        Assertions.assertEquals(2.39, basket.getTotalCost(), epsilon);
     }
 }
