@@ -8,18 +8,25 @@ public class InventoryItem {
     private String name;
     private String variant;
 
-    public InventoryItem (String SKU, double price, String name, String variant) {
+    public InventoryItem(String SKU, double price, String name, String variant) {
         this.SKU = SKU;
         this.price = price;
         this.name = name;
         this.variant = variant;
     }
 
+    public InventoryItem(InventoryItem otherItem) {
+        this.SKU = otherItem.getSKU();
+        this.price = otherItem.getPrice();
+        this.name = otherItem.getName();
+        this.variant = otherItem.getVariant();
+    }
+
     public void setSKU (String newSKU) {
         this.SKU = newSKU;
     }
 
-    public String getSKU () {
+    public String getSKU() {
         return this.SKU;
     }
 

@@ -57,4 +57,15 @@ class InventoryItemTest {
         InventoryItem theItem = new InventoryItem("BGLO", 0.49, "Bagel", "Onion");
         Assertions.assertEquals("Onion", theItem.getVariant());
     }
+
+    @Test
+    void testCopyConstructor() {
+        InventoryItem theItem = new InventoryItem("BGLO", 0.49, "Bagel", "Onion");
+        InventoryItem copiedItem = new InventoryItem(theItem);
+        Assertions.assertNotEquals(theItem, copiedItem);
+        Assertions.assertEquals(theItem.getSKU(), copiedItem.getSKU());
+        Assertions.assertEquals(theItem.getName(), copiedItem.getName());
+        Assertions.assertEquals(theItem.getPrice(), copiedItem.getPrice());
+        Assertions.assertEquals(theItem.getVariant(), copiedItem.getVariant());
+    }
 }
