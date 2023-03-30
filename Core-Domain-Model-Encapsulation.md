@@ -123,3 +123,5 @@ I want customers to only be able to order things that we stock in our inventory.
 In order to be able to only create instances of inventory items that are the same as the ones in the list, in the Basket
 class we're going to make a HashMap of the 13 available Inventory Items, with the SKU as a key and also create a copy 
 constructor for the InventoryItem class so that it can take one of the existing items and copy it into the basket.
+
+Added toString() methods to each class to make them display nicely.

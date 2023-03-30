@@ -68,4 +68,10 @@ class InventoryItemTest {
         Assertions.assertEquals(theItem.getPrice(), copiedItem.getPrice());
         Assertions.assertEquals(theItem.getVariant(), copiedItem.getVariant());
     }
+
+    @Test
+    void testToString() {
+        InventoryItem theItem = new InventoryItem("BGLO", 0.49, "Bagel", "Onion");
+        Assertions.assertEquals("[SKU: BGLO, Price: 0.49, Name: Onion Bagel]", theItem.toString());
+    }
 }

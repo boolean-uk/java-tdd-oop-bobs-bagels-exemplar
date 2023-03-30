@@ -56,4 +56,8 @@ public class InventoryItem {
         return this.variant;
     }
 
+    public String toString() {
+        return "[SKU: " + this.SKU + ", Price: " + this.price + ", Name: " + this.variant + " " + this.name + "]";
+    }
+
 }
