@@ -114,3 +114,8 @@ I want customers to only be able to order things that we stock in our inventory.
 | FILX | 0.12  | Filling | Cream Cheese  |
 | FILS | 0.12  | Filling | Smoked Salmon |
 | FILH | 0.12  | Filling | Ham           |
+
+
+In order to be able to only create instances of inventory items that are the same as the ones in the list, in the Basket
+class we're going to make a HashMap of the 13 available Inventory Items, with the SKU as a key and also create a copy 
+constructor for the InventoryItem class so that it can take one of the existing items and copy it into the basket.
