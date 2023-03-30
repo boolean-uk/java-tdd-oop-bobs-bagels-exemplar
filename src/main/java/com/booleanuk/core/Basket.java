@@ -69,6 +69,9 @@ public class Basket {
     }
 
     public double getCost(String itemSKU) {
+        // As the number is stored as a double, this will return a value with a rounding error.
+        // If displaying to customer then it will need reducing to 2DP
+        // For testing use an epsilon value which is sufficiently small
         if (this.stock.containsKey(itemSKU)) {
             return this.stock.get(itemSKU).getPrice();
         } else {
